@@ -3,10 +3,9 @@
     "title": "Navigation",
     "fields": [
         {
-            "key": "field_648bb3a003884",
+            "key": "field_648d3bc6eca8e",
             "label": "Logo",
             "name": "logo",
-            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -17,6 +16,7 @@
                 "id": ""
             },
             "return_format": "url",
+            "preview_size": "medium",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -24,14 +24,12 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
+            "mime_types": ""
         },
         {
-            "key": "field_648bb42f03885",
+            "key": "field_648d3be1eca8f",
             "label": "Sections",
             "name": "sections",
-            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -41,19 +39,16 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "row",
-            "pagination": 0,
+            "collapsed": "",
             "min": 0,
             "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
+            "layout": "table",
+            "button_label": "",
             "sub_fields": [
                 {
-                    "key": "field_648bb4550af97",
+                    "key": "field_648d3bebeca90",
                     "label": "Section",
                     "name": "section",
-                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -63,8 +58,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "parent_repeater": "field_648bb42f03885"
+                    "return_format": "array"
                 }
             ]
         }
@@ -84,8 +78,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1686877312
+    "modified": 1686977538
 }

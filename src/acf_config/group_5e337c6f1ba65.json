@@ -6,7 +6,6 @@
             "key": "field_5e337c7407471",
             "label": "Blocks",
             "name": "blocks",
-            "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -27,7 +26,6 @@
                             "key": "field_61c32ba59dac7",
                             "label": "Text",
                             "name": "text",
-                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -47,17 +45,16 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_648bb50eaf737": {
-                    "key": "layout_648bb50eaf737",
+                "layout_648d3cedc19e2": {
+                    "key": "layout_648d3cedc19e2",
                     "name": "hero",
                     "label": "Hero",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_648bb51faf739",
+                            "key": "field_648d3cf3c19e3",
                             "label": "fields",
                             "name": "fields",
-                            "aria-label": "",
                             "type": "clone",
                             "instructions": "",
                             "required": 0,
@@ -68,7 +65,38 @@
                                 "id": ""
                             },
                             "clone": [
-                                "group_648bb491c44c0"
+                                "group_648d3c07d0c9f"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_648d48921f966": {
+                    "key": "layout_648d48921f966",
+                    "name": "accessories",
+                    "label": "Accessories",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_648d48a31f967",
+                            "label": "fields",
+                            "name": "fields",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_648d47e8a58f4"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -80,9 +108,9 @@
                     "max": ""
                 }
             },
+            "button_label": "Add Block",
             "min": "",
-            "max": "",
-            "button_label": "Add Block"
+            "max": ""
         }
     ],
     "location": [
@@ -111,8 +139,7 @@
         "discussion",
         "comments"
     ],
-    "active": true,
+    "active": 1,
     "description": "Block Chooser for all content types that will have blocks.",
-    "show_in_rest": 0,
-    "modified": 1686877498
+    "modified": 1686980793
 }
