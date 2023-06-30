@@ -1,5 +1,7 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Playfair+Display:wght@400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Montserrat:ital,wght@0,200;0,400;0,700;1,200&display=swap');
+
 // Breakpoints Structure
 $custom-breakpoints: (
     xs: (minSize: 0px, maxSize: 575px, maxContWidth: 0px, name: 'XS'),
@@ -12,6 +14,7 @@ $custom-breakpoints: (
 
 //fonts
 $play : 'Playfair Display', serif;
+$mont : 'Montserrat', sans-serif;
 @font-face {
     font-family: 'akiri';
     src: url('/wp-content/themes/tse/fonts/Akira-Expanded.otf');
@@ -19,5 +22,17 @@ $play : 'Playfair Display', serif;
 
 //colors
 
-$primary : #04EE64;
+$primary : #D4F219;
 
+//animations
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, -15px); }
+    to   { transform: translate(0, -0px); }    
+}
+@keyframes floatingShadow {
+    from { filter: blur(15px); }
+    65%  { filter: blur(30px); }
+    to   { filter: blur(15px); }    
+}

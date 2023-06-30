@@ -22,13 +22,15 @@ html, body {
 }
 body {
     position:relative;
+    overflow-x: hidden;
     
 }
 
 *, ::after, ::before{
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  cursor: none !important;
 }
 a{
   display: inline-block;

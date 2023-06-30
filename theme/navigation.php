@@ -2,6 +2,12 @@
     $logo = get_field("logo", "option");
     $sections = get_field("sections", "option");
 ?>
+<div class="cursor">
+    <div class="content">
+        <div class="heading">Click</div>
+        <div class="description">get it for <span>Absolutely Free</span> with <span>each T-shirt</span></div>
+    </div>
+</div>
 <header class="header">
     <div class="header-wrap">
         <div class="menu-button">

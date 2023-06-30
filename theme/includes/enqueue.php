@@ -44,6 +44,13 @@
 				"path" => 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js',
 				"version" => '1.0.0',
 				"loadInFooter" => false
+			],
+			[
+				"name" => 'custom.js', 
+				"type" => 'js',
+				"path" => $templatedir . '/js/custom.js',
+				"version" => '1.0.0',
+				"loadInFooter" => true
 			]
 		];
 		
