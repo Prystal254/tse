@@ -1,7 +1,6 @@
 
 .accessories-section{
-    padding: 30px;
-    height: 100vh;
+    padding: 100px 30px;
     background: #e0e0e0;
     .heading{
         font-size: 120px;
@@ -9,16 +8,33 @@
         color: black;
         margin-bottom: 80px;
         text-align: center;
+        position: relative;
+        z-index: 2;
+        &::before{
+            position: absolute;
+            content: 'Free';
+            z-index: 1;
+            opacity: 0.8;
+            font-family: "free";
+            pointer-events: none;
+            color: $primary;
+            font-size: 250px;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%) rotate(-15deg);
+            text-shadow: 0 0 5px black;  
+        }
     }
     .inner{
         // height: 100%;
-        max-width: 1400px;
+        // max-width: 1400px;
         margin: 0 auto;
         display: flex;
         align-items: center;
 
         .accessories{
             display: flex;
+            width: 100%;
             grid-gap: 40px;
             align-items: center;
             .accessory{
@@ -93,7 +109,7 @@
                             font-weight: 800;
                             text-align: center;
                             color: black;
-                            font-size: 10px;
+                            font-size: 12px;
                         }
                         &.free{
                             color: rgba(0, 0, 0, 1);
@@ -108,7 +124,7 @@
                                 font-weight: 800;
                                 text-align: center;
                                 color: black;
-                                font-size: 10px;
+                                font-size: 12px;
                             }
                         }
                     }
@@ -130,7 +146,7 @@
                     font-style: italic;
                     font-weight: 600;
                 }
-                &:hover{
+                &:hover, &.hover{
                     transition: scale 50ms ease-in;
                     transition: 300ms ease-in;
                     box-shadow:  20px 20px 60px #bebebe,

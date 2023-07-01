@@ -11,6 +11,12 @@
 				"version" => '4.7.0_defer'
 			],
 			[
+                "name" => "jquery.fullPage.css",
+                "type" => "css",
+                "path" => "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css",
+                "version" => "2.6.6", 
+            ],
+			[
 				"name" => 'style.css', 
 				"type" => 'css',
 				"path" => $templatedir . '/style.css',
@@ -45,6 +51,13 @@
 				"version" => '1.0.0',
 				"loadInFooter" => false
 			],
+			[
+                "name" => "jquery.fullPage.min.js",
+                "type" => "js",
+                "path" => "https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js",
+                "version" => '2.6.6', 
+                "loadInFooter" => false
+            ],
 			[
 				"name" => 'custom.js', 
 				"type" => 'js',

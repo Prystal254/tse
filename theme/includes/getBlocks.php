@@ -26,6 +26,9 @@
             case 'accessories':
               include 'blocks/accessories.php';
               break;
+            case 'tshirts':
+              include 'blocks/tshirts.php';
+              break;
             
           }
         }

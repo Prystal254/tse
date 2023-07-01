@@ -1,0 +1,222 @@
+
+.tshirts-section{
+    padding: 100px 30px;
+    background: $black;
+    .heading{
+        font-size: 120px;
+        font-family: "akiri";
+        color: $white;
+        margin-bottom: 80px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        &::before{
+            position: absolute;
+            content: 'Campaign';
+            z-index: 1;
+            opacity: 0.8;
+            font-family: "free";
+            pointer-events: none;
+            color: $primary;
+            font-size: 100px;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%) rotate(-15deg);
+            text-shadow: 0 0 5px black;  
+        }
+    }
+    .inner{
+        // height: 100%;
+        // max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        .tshirts{
+            display: flex;
+            grid-gap: 40px;
+            align-items: center;
+            width: 100%;
+            .tshirt{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                grid-gap: 10px ;
+                width: 33.3%;
+                padding: 30px;
+                border-radius: 30px;
+                transition: 300ms ease-in;
+                overflow: hidden;
+                position: relative;
+                .name{
+                    position: absolute;
+                    background-color: $primary;
+                    font-family: "akiri";
+                    width: 100%;
+                    transition: 300ms ease-in;
+                    font-size: 24px;
+                    opacity: 0;
+                    text-align: center;
+                }
+                .image{
+                    margin-top: 50px;
+                    position: relative;
+                    transition: 0.6s ease-in-out;
+                    transform-style: preserve-3d;
+                    transform: perspective(800px) rotateY(0turn);
+                    overflow: visible;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    height: 400px;
+                    margin-bottom: -50px;
+                    &::after{
+                        position: absolute;
+                        content: "";
+                        transition: 300ms ease-in;
+                        bottom: 0;
+                        opacity: 0;
+                        left: 0;
+                        right: 0;
+                        height: 50%;
+                        background: linear-gradient(to top, transparentize($color: $black, $amount: 0.2), transparent);
+                    }
+                    .card__face {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        backface-visibility: hidden;
+                        transition: 1s ease-in-out;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        img {
+                          height: 400px;
+                          object-fit: cover;
+                        }
+                  
+                        &--front {
+                          transform: rotateY(0.5turn);
+                        }
+                    }
+                    .shadow{
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transition: 300ms ease-in;
+                        transform: translateX(-50%);
+                        height: 10px;
+                        border-radius: 50%;
+                        width: 70%;
+                        background-color: rgba(0, 0, 0, 0.5);
+                        filter: blur(15px);
+                    }
+                }
+                .details{
+                    display: flex;
+                    transition: 400ms ease-in;
+                    align-items: center;
+                    flex-direction: column;
+                    scale: 0.95;
+                    opacity: 0;
+                    .price{
+                        font-size: 90px;
+                        font-family: "akiri";
+                        position: relative;
+                        line-height: 0.9;
+                        color: transparentize($color: $white, $amount: 0.6);
+                        &::before{
+                            position: absolute;
+                            top: 50%;
+                            line-height: 1.2;
+                            transform: translateY(-50%);
+                            content: "Actual Price";
+                            font-family: "akiri";
+                            background-color: #f2191979;
+                            width: 100%;
+                            font-weight: 800;
+                            text-align: center;
+                            color: black;
+                            font-size: 12px;
+                        }
+                        &.sale{
+                            color: $white;
+                            &::before{
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                content: "Flat 30% off";
+                                font-family: "akiri";
+                                background-color: #d5f2198f;
+                                width: 100%;
+                                font-weight: 800;
+                                text-align: center;
+                                color: black;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                .display-name{
+                    opacity: 1;
+                    transition: 300ms ease;
+                    position: absolute;
+                    bottom: 0;
+                    height: 15%;
+                    z-index: 10;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: calc(100% - 60px);
+                    text-align: center;
+                    font-size: 26px;
+                    color: $white;
+                    font-family: $mont;
+                    font-style: italic;
+                    font-weight: 600;
+                }
+                &:hover, &.hover{
+                    transition: scale 50ms ease-in;
+                    transition: 300ms ease-in;
+                    box-shadow:  20px 20px 60px #232323,
+                    -20px -20px 60px #373737;
+                    .name{
+                        opacity: 1;
+                    }
+                    .image{
+                        transform: perspective(800px) rotateY(0.5turn);
+                        &::after{
+                            transition: 300ms ease-in;
+                            opacity: 1;
+                        }
+                        .shadow{
+                            opacity: 0;
+                            transition: 300ms ease-in;
+                        }
+                    }
+                    .details{
+                        transition: 400ms ease-in;
+                        opacity: 1;
+                        scale: 1;    
+                    }
+                    .display-name{
+                        transition: 300ms ease;
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                }
+                &:active{
+                    transition: scale 50ms ease-in;
+                    scale: 0.99;
+                    box-shadow: inset 20px 20px 60px #262626,
+                    inset -20px -20px 60px #343434;
+                }
+                &.defocus{
+                    transition: 300ms;
+                    filter: blur(5px);
+                }
+            }
+        }
+    }
+}

@@ -26,6 +26,11 @@
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
+        &.shop-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .heading{
             font-size: 50px;
             font-family: $mont;
@@ -46,6 +51,19 @@
             span{
                 -webkit-text-stroke: 1px invert($color: $primary);
             }
+        }
+        .shop-svg{
+            width: 110px;
+            // position: absolute;
+            // left: 50%;
+            // top: 50%;
+            filter: drop-shadow(0px 0px 2px white);
+            // transform: translateX(-50%) translateY(-50%);
+            fill: invert($color: $primary);
+            animation-name: floating;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
         }
         &.show{
             transition: 1000ms ease;

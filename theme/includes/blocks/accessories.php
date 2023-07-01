@@ -1,5 +1,5 @@
-<section class="accessories-section">
-    <h2 class="heading">Accessories</h2>
+<section class="section accessories-section">
+    <h2 class="heading"><?php echo $block["heading"]?></h2>
     <div class="inner">
         <div class="accessories">
             <?php foreach($block["products"] as $product){?>

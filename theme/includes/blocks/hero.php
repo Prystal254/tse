@@ -1,4 +1,4 @@
-<section class="hero" style="background-image:url('<?php echo $block["background_image"]?>');">
+<section class="section hero" style="background-image:url('<?php echo $block["background_image"]?>');">
     <div class="inner">
         <?php foreach($block["models"] as $model){?>
             <img src="<?php echo $model["model"]?>" alt="" class="model">    

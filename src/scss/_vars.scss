@@ -19,10 +19,16 @@ $mont : 'Montserrat', sans-serif;
     font-family: 'akiri';
     src: url('/wp-content/themes/tse/fonts/Akira-Expanded.otf');
 }
+@font-face {
+    font-family: 'free';
+    src: url('/wp-content/themes/tse/fonts/Tomatoes.ttf');
+}
 
 //colors
 
 $primary : #D4F219;
+$white : #e0e0e0;
+$black : #2D2D2D;
 
 //animations
 
