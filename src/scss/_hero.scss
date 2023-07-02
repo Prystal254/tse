@@ -13,11 +13,11 @@
         .model{
             position: absolute;
             bottom: 0;
-            transition: 500ms ;
+            transition: 200ms ;
             z-index: 2;
             transform-origin: left bottom;
-            -webkit-filter: drop-shadow(2px 5px 5px black);
-            filter: drop-shadow(2px 5px 5px black);
+            // -webkit-filter: drop-shadow(2px 5px 5px black);
+            // filter: drop-shadow(2px 5px 5px black);
             &:nth-child(1){
                 scale: 1.3;
                 left: 400px;
@@ -47,6 +47,8 @@
         .content{
             margin-bottom: 100px;
             max-width: 30%;
+            position: relative;
+            z-index: 5;
             .description{
                 padding-left: 5px;
                 font-size: 18px;

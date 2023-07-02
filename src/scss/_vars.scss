@@ -42,3 +42,18 @@ $black : #2D2D2D;
     65%  { filter: blur(30px); }
     to   { filter: blur(15px); }    
 }
+@keyframes topDelay {
+    from { transform: translateY(0px); }
+    50%  { transform: translateY(5px); }
+    to   { transform: translateY(0px); }    
+}
+@keyframes bottomDelay {
+    from { transform: translateY(0px); }
+    50%  { transform: translateY(-5px); }
+    to   { transform: translateY(0px); }    
+}
+@keyframes delayRotate {
+    from { transform: rotateZ(0deg); }
+    50%  { transform: rotateZ(-25deg); }
+    to   { transform: rotateZ(0deg); }    
+}

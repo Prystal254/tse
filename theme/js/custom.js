@@ -15,7 +15,14 @@ $.fn.isInViewport = function() {
 
 $(document).ready(function(){
 
-    // accessory hover
+    //menu / cross
+
+    $(".menu-button").click(function(){
+        $(this).toggleClass("cross")
+        // console.log("jsaDahjscva")
+    })
+
+    // product hover
 
     $(".accessory").mouseover(function(){
         $(".accessory").addClass("defocus");
@@ -23,6 +30,13 @@ $(document).ready(function(){
     })
     $(".accessory").mouseout(function(){
         $(".accessory").removeClass("defocus");
+    })
+    $(".tshirt").mouseover(function(){
+        $(".tshirt").addClass("defocus");
+        $(this).removeClass("defocus");
+    })
+    $(".tshirt").mouseout(function(){
+        $(".tshirt").removeClass("defocus");
     })
 
     //cursor
@@ -46,6 +60,10 @@ $(document).ready(function(){
             $(".cursor").removeClass("active")
             $(".cursor .content").removeClass("show")
         }
+
+        //banner image
+        $(".model").css("transform", `translateX(${e.clientX / 50}px) translateY(${e.clientY / 40}px)`)
+
     })
 })
 let accessoryHoverRunOnce = false;
@@ -79,11 +97,14 @@ $(window).on('resize scroll', function() {
         tshirtHoverRunOnce = true;
     }
 
-    //banner parallax
-    let modelParallax = $(window).scrollTop() / 7;
-    if(modelParallax > 150){
-        modelParallax = 150;
+
+    //nav scrolled animation
+
+    if($(window).scrollTop() > 50){
+        $(".header").addClass("scrolled")
+    }else{
+        $(".header").removeClass("scrolled")
     }
-    $(".model").eq(0).css("transform", `translateY(${modelParallax}px)`)
-    $(".model").eq(1).css("transform", `translateY(${modelParallax * 1.1}px)`)
+    
+
 });
