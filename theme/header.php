@@ -24,6 +24,9 @@
       #wpadminbar{
         display: none !important;
       }
+      html{
+        margin-top: 0 !important;
+      }
     </style>
   </head>
   <body class="<?php 

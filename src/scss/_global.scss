@@ -44,4 +44,6 @@ a{
   background-color: black;
   color: $primary;
 }
-
+html{
+  scroll-behavior: smooth;
+}

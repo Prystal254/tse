@@ -1,9 +1,9 @@
-<section class="section accessories-section">
+<section id="accessories-section" class="section accessories-section">
     <h2 class="heading"><?php echo $block["heading"]?></h2>
     <div class="inner">
         <div class="accessories">
             <?php foreach($block["products"] as $product){?>
-                <div class="accessory">
+                <a href="#tshirts-section" class="accessory">
                     <div class="name">
                         <?php echo $product["product"]["name"]?>
                     </div>
@@ -12,14 +12,23 @@
                         <div class="shadow"></div>
                     </div>
                     <div class="details">
-                        <div class="price">$<?php echo $product["product"]["price"] ?></div>
+                        <div class="price"><?php echo $product["product"]["price"] ?>Rs</div>
                         <div class="price free">FREE</div>
                     </div>
                     <div class="display-name">
                         <?php echo $product["product"]["name"]?>
                     </div>
-                </div>
+                </a>
             <?php } ?>
         </div>
+    </div>
+    <div class="scroll">
+        <?php for ($i=0; $i < 2; $i++) { ?>
+            <div>
+                <?php for ($j=0; $j < 4; $j++) { 
+                    echo $block["ticker"];
+                }?>
+            </div>
+        <?php }?>
     </div>
 </section>

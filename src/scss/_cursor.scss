@@ -12,6 +12,9 @@
     border-style: dashed;
     // mix-blend-mode:  difference;
     // backdrop-filter: invert(100%);
+    @media(max-width:1024px){
+        display: none !important;
+    }
     filter: invert(100%);
     &.active{
         width: 200px;

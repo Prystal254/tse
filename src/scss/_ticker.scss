@@ -1,0 +1,50 @@
+@keyframes animate {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes animate2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+}
+.scroll {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    
+    div {
+      font-weight: 900;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: black;
+      line-height: 1.5;
+      padding-left: 10px;
+      font-family: "akiri";
+      background-color: $primary;
+      animation: animate 120s -60s linear infinite;
+      will-change: transform;
+      z-index: 2;
+      @media(max-width:991px){
+        font-size: 1em;
+      }
+      &:nth-child(2) {
+        animation: animate2 120s -00s linear infinite;
+      }
+    }
+    
+    span {
+      -webkit-text-stroke: 1.5px #000000;
+      color: transparent;
+    }
+}

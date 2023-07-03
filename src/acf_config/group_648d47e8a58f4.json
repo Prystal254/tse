@@ -122,6 +122,25 @@
                     ]
                 }
             ]
+        },
+        {
+            "key": "field_64a30ae10bee9",
+            "label": "Ticker",
+            "name": "ticker",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -141,5 +160,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1688124932
+    "modified": 1688407016
 }

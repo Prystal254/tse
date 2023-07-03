@@ -123,6 +123,25 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_64a30970c0ed5",
+            "label": "Ticker",
+            "name": "ticker",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -142,5 +161,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1686977735
+    "modified": 1688406740
 }
