@@ -59,11 +59,15 @@
             // top: 50%;
             filter: drop-shadow(0px 0px 2px white);
             // transform: translateX(-50%) translateY(-50%);
-            fill: invert($color: $primary);
             animation-name: floating;
             animation-duration: 3s;
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
+            #SVGRepo_iconCarrier{
+                path{
+                    fill: invert($color: $primary);
+                }
+            }
         }
         &.show{
             transition: 1000ms ease;

@@ -14,13 +14,19 @@ $.fn.isInViewport = function() {
 
 
 $(document).ready(function(){
-
-    //menu / cross
-
+    setTimeout(() => {
+        $(".header").addClass("scrolled")
+    }, 600);
+    //menu toggle
     $(".menu-button").click(function(){
         $(this).toggleClass("cross")
-        // console.log("jsaDahjscva")
+        $(".menu-content").slideToggle(600)
+        $(this).css("pointer-events", "none")
+        setTimeout(() => {
+            $(this).css("pointer-events", "all")
+        }, 700);
     })
+
 
     // product hover
 
@@ -100,11 +106,11 @@ $(window).on('resize scroll', function() {
 
     //nav scrolled animation
 
-    if($(window).scrollTop() > 50){
-        $(".header").addClass("scrolled")
-    }else{
-        $(".header").removeClass("scrolled")
-    }
+    // if($(window).scrollTop() > 50){
+    //     $(".header").addClass("scrolled")
+    // }else{
+    //     $(".header").removeClass("scrolled")
+    // }
     
 
 });
