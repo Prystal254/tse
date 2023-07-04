@@ -168,4 +168,24 @@ $(window).on('resize scroll', function() {
           }
         ]
       });
+    $('.accessories').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 9999,
+            settings: "unslick"
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '100px',
+              slidesToShow: 1
+            }
+          }
+        ]
+      });
 });

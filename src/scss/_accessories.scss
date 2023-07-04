@@ -59,6 +59,9 @@
             @media(max-width:991px){
                 grid-gap: 15px;
             }
+            @media(max-width:767px){
+                scale: 1.15;
+            }
             .accessory{
                 color: black;
                 cursor: pointer;
@@ -75,6 +78,15 @@
                 background: #e0e0e0;
                 box-shadow:  20px 20px 60px #d0d0d0,
                 -20px -20px 60px #f0f0f0;
+                @media(max-width:767px){
+                    margin: 80px 20px;
+                    box-shadow:  20px 20px 60px #d0d0d0,
+             -20px -20px 60px #f0f0f0 !important;
+                }
+                &.slick-active{
+                    box-shadow:  20px 20px 60px #9d9d9d,
+             -20px -20px 60px #ffffff !important;
+                }
                 .name{
                     position: absolute;
                     background-color: $primary;
@@ -146,6 +158,9 @@
                         @media(max-width:991px){
                             font-size: 48px;
                         }
+                        @media(max-width:767px){
+                            font-size: 56px;
+                        }
                         &::before{
                             position: absolute;
                             top: 50%;
@@ -171,6 +186,9 @@
                             }
                             @media(max-width:991px){
                                 font-size: 60px;
+                            }
+                            @media(max-width:767px){
+                                font-size: 70px;
                             }
                             &::before{
                                 position: absolute;
@@ -256,6 +274,26 @@
                 &.defocus{
                     transition: 300ms;
                     filter: blur(5px);
+                }
+            }
+            .slick-dots{
+                transform: translateY(-150%);
+                li{
+                    &.slick-active{
+                        button{
+                            &::before{
+                                transition: 400ms ease-in-out;
+                                font-size: 20px;
+                                color: $primary;
+                            }
+                        }
+                    }
+                    button{
+                        &::before{
+                            transition: 400ms ease-in-out;
+                            font-size: 12px;
+                        }
+                    }
                 }
             }
         }
