@@ -20,7 +20,10 @@
     bottom: 0;
     display: flex;
     width: 100%;
-    
+    z-index: 2;
+    @media(max-width:767px){
+      z-index: 4;
+    }
     div {
       font-weight: 900;
       font-size: 1.5em;
@@ -41,6 +44,10 @@
       @media(max-width:767px){
         font-size: 0.9em;
       }
+      @media(max-width:567px){
+        font-size: 0.8em;
+        letter-spacing: 0;
+      }
       &:nth-child(2) {
         animation: animate2 120s -00s linear infinite;
       }
@@ -51,6 +58,9 @@
       color: transparent;
       @media(max-width:767px){
         -webkit-text-stroke: 1px #000000;
+      }
+      @media(max-width:567px){
+        -webkit-text-stroke: 0.5px #000000;
       }
     }
 }

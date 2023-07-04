@@ -5,6 +5,9 @@
     @media(max-width:1440px){
         padding: 50px 30px;
     }
+    @media(max-width:567px){
+        padding: 50px 10px;
+    }
     .heading{
         font-size: 100px;
         font-family: "akiri";
@@ -12,10 +15,21 @@
         margin-bottom: 80px;
         text-align: center;
         position: relative;
+        white-space: nowrap;
         z-index: 2;
         @media(max-width:1440px){
             font-size: 70px;
             margin-bottom: 50px;
+        }
+        @media(max-width:767px){
+            margin-bottom: 580px;
+            font-size: 60px;
+        }
+        @media(max-width:567px){
+            font-size: 50px;
+        }
+        @media(max-width:399px){
+            font-size: 42px;
         }
         &::before{
             position: absolute;
@@ -33,6 +47,15 @@
             @media(max-width:1440px){
                 font-size: 70px;
             }  
+            @media(max-width:767px){
+                font-size: 60px;
+            }
+            @media(max-width:567px){
+                font-size: 50px;
+            }
+            @media(max-width:399px){
+                font-size: 42px;
+            }
         }
     }
     .inner{
@@ -59,7 +82,10 @@
                 grid-gap: 15px;
             }
             @media(max-width:767px){
-                scale: 1.15;
+                position: absolute;
+                left: 0;
+                right: 0;
+                transform: translateY(-50%);
             }
             .tshirt{
                 display: flex;
@@ -186,6 +212,9 @@
                         }
                         @media(max-width:767px){
                             font-size: 55px;
+                        }
+                        @media(max-width:399px){
+                            font-size: 46px;
                         }
                         &::before{
                             position: absolute;

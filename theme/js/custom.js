@@ -50,6 +50,10 @@ $(document).ready(function(){
         }, 700);
     })
 
+    $(".menu-item").click(function(){
+      $(".menu-content").slideUp(600)
+      $(".menu-button").removeClass("cross")
+    })
 
     // product hover
     if(($(window).innerWidth() > 1024)){
@@ -165,6 +169,42 @@ $(window).on('resize scroll', function() {
               centerPadding: '100px',
               slidesToShow: 1
             }
+          },
+          {
+            breakpoint: 568,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '70px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '30px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 400,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '10px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 320,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '0px',
+              slidesToShow: 1
+            }
           }
         ]
       });
@@ -183,6 +223,42 @@ $(window).on('resize scroll', function() {
               arrows: false,
               centerMode: true,
               centerPadding: '100px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 568,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '70px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '30px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 400,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '10px',
+              slidesToShow: 1
+            }
+          },
+          {
+            breakpoint: 320,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '0px',
               slidesToShow: 1
             }
           }

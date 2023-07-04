@@ -22,13 +22,15 @@
             <?php } ?>
         </div>
     </div>
-    <div class="scroll">
-        <?php for ($i=0; $i < 2; $i++) { ?>
-            <div>
-                <?php for ($j=0; $j < 4; $j++) { 
-                    echo $block["ticker"];
-                }?>
-            </div>
-        <?php }?>
+    <div class="limiter">
+        <div class="scroll">
+            <?php for ($i=0; $i < 2; $i++) { ?>
+                <div>
+                    <?php for ($j=0; $j < 4; $j++) { 
+                        echo $block["ticker"];
+                    }?>
+                </div>
+            <?php }?>
+        </div>
     </div>
 </section>

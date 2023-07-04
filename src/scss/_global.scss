@@ -31,6 +31,9 @@ body {
   margin: 0;
   box-sizing: border-box;
   cursor: none !important;
+  @media(max-width:1024px){
+    cursor: auto !important;
+  }
 }
 a{
   display: inline-block;

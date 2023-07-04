@@ -1,9 +1,23 @@
 .hero{
-    height: 100vh;
+    height: 100dvh;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     overflow: hidden;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 70%;
+        background: linear-gradient(to top, black, transparent);
+        z-index: 3;
+        display: none;
+        @media(max-width:767px){
+            display: block;
+        }
+    }
     .inner{
         height: 100%;
         padding: 0 30px;
@@ -11,6 +25,12 @@
         justify-content: flex-end;
         align-items: flex-end;
         position: relative;
+        @media(max-width:767px){
+            justify-content: center;
+        }
+        @media(max-width:567px){
+            padding: 0 10px;
+        }
         .model{
             position: absolute;
             bottom: 0;
@@ -31,6 +51,10 @@
                     scale: 1;
                     left: -100px;
                 }
+                @media(max-width:767px){
+                    left: 0;
+                    scale: 1.2;
+                }
             }
             &:nth-child(2){
                 left: 400px;
@@ -46,6 +70,11 @@
                 @media(max-width:991px){
                     scale: 0.9;
                     left: 150px;
+                }
+                @media(max-width:767px){
+                    left: auto;
+                    right: 0;
+                    scale: 1.2;
                 }
             }
         }
@@ -70,6 +99,26 @@
             }
             @media(max-width:991px){
                 font-size: 100px;
+                line-height: 80%;
+            }
+            @media(max-width:767px){
+                font-size: 75px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding-left: 0;
+                text-align: center;
+            }
+            @media(max-width:567px){
+                font-size: 60px;
+            }
+            @media(max-width:499px){
+                font-size: 48px;
+            }
+            @media(max-width:399px){
+                font-size: 42px;
+            }
+            @media(max-width:350px){
+                font-size: 38px;
             }
             &.stroke{
                 z-index: 3;
@@ -91,10 +140,19 @@
                 flex-direction: column;
                 align-items: flex-end;
             }
+            @media(max-width:767px){
+                max-width: 70%;
+                align-items: center;
+                margin-bottom: 100px;
+            }
+            @media(max-width:567px){
+                max-width: 100%;
+            }
             .description{
                 font-size: 18px;
                 font-family: $mont;
-                color: $primary;
+                color: $white;
+                text-shadow: 0 0 4px black;
                 margin-bottom: 40px;
                 @media(max-width:1440px){
                     font-size: 16px;
@@ -102,6 +160,16 @@
                 }
                 @media(max-width:991px){
                     text-align: right;
+                }
+                @media(max-width:767px){
+                    text-align: center;
+                    margin-bottom: 60px;
+                }
+                @media(max-width:567px){
+                    margin-bottom: 40px;
+                }
+                @media(max-width:399px){
+                    font-size: 14px;
                 }
             }
             .cta{
@@ -116,6 +184,10 @@
                 @media(max-width:991px){
                     padding: 20px 40px;
                     font-size: 28px;
+                }
+                @media(max-width:399px){
+                    padding: 15px 30px;
+                    font-size: 24px;
                 }
                 &:hover{
                     color: $primary;
