@@ -58,6 +58,9 @@
             @media(max-width:991px){
                 grid-gap: 15px;
             }
+            @media(max-width:767px){
+                scale: 1.15;
+            }
             .tshirt{
                 display: flex;
                 flex-direction: column;
@@ -71,6 +74,15 @@
                 position: relative;
                 box-shadow:  20px 20px 60px #262626,
                 -20px -20px 60px #343434;
+                @media(max-width:767px){
+                    margin: 80px 20px;
+                    box-shadow:  20px 20px 60px #262626,
+             -20px -20px 60px #343434 !important;
+                }
+                &.slick-active{
+                    box-shadow:  20px 20px 60px #1b1b1b,
+             -20px -20px 60px #3f3f3f !important;
+                }
                 .name{
                     position: absolute;
                     background-color: $primary;
@@ -172,6 +184,9 @@
                         @media(max-width:991px){
                             font-size: 46px;
                         }
+                        @media(max-width:767px){
+                            font-size: 55px;
+                        }
                         &::before{
                             position: absolute;
                             top: 50%;
@@ -263,6 +278,26 @@
                 &.defocus{
                     transition: 300ms;
                     filter: blur(5px);
+                }
+            }
+            .slick-dots{
+                transform: translateY(-150%);
+                li{
+                    &.slick-active{
+                        button{
+                            &::before{
+                                transition: 400ms ease-in-out;
+                                font-size: 20px;
+                                color: $primary;
+                            }
+                        }
+                    }
+                    button{
+                        &::before{
+                            transition: 400ms ease-in-out;
+                            font-size: 12px;
+                        }
+                    }
                 }
             }
         }

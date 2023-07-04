@@ -151,6 +151,7 @@ $(window).on('resize scroll', function() {
     $('.tshirts').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        dots: true,
         responsive: [
           {
             breakpoint: 9999,
@@ -161,7 +162,7 @@ $(window).on('resize scroll', function() {
             settings: {
               arrows: false,
               centerMode: true,
-              centerPadding: '40px',
+              centerPadding: '100px',
               slidesToShow: 1
             }
           }
