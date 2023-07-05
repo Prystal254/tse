@@ -1,6 +1,7 @@
 <section id="tshirts-section" class="section tshirts-section">
     <h2 class="heading"><?php echo $block["heading"]?></h2>
     <div class="inner">
+        <div class="tshirt-wrap">
         <div class="tshirts">
             <?php foreach($block["products"] as $product){?>
                 <div class="tshirt">
@@ -25,6 +26,7 @@
                     </div>
                 </div>
             <?php } ?>
+        </div>
         </div>
     </div>
 </section>

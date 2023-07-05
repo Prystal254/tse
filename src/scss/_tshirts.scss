@@ -64,22 +64,12 @@
         margin: 0 auto;
         display: flex;
         align-items: center;
-
-        .tshirts{
-            display: flex;
-            grid-gap: 40px;
-            align-items: center;
+        .tshirt-wrap{
             width: 100%;
             margin: 0 auto;
             margin-bottom: 50px;
             @media(max-width:1440px){
                 max-width: 1200px;
-            }
-            @media(max-width:1280px){
-                grid-gap: 20px;
-            }
-            @media(max-width:991px){
-                grid-gap: 15px;
             }
             @media(max-width:767px){
                 position: absolute;
@@ -87,6 +77,17 @@
                 right: 0;
                 transform: translateY(-50%);
             }
+        .tshirts{
+            display: flex;
+            grid-gap: 40px;
+            align-items: center;
+            @media(max-width:1280px){
+                grid-gap: 20px;
+            }
+            @media(max-width:991px){
+                grid-gap: 15px;
+            }
+            
             .tshirt{
                 display: flex;
                 flex-direction: column;
@@ -329,6 +330,7 @@
                     }
                 }
             }
+        }
         }
     }
 }

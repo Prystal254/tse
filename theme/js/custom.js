@@ -173,37 +173,25 @@ $(window).on('resize scroll', function() {
           {
             breakpoint: 568,
             settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '70px',
-              slidesToShow: 1
             }
           },
           {
             breakpoint: 500,
             settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '30px',
-              slidesToShow: 1
             }
           },
           {
             breakpoint: 400,
             settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '10px',
-              slidesToShow: 1
             }
           },
           {
             breakpoint: 320,
             settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '0px',
-              slidesToShow: 1
             }
           }
         ]
@@ -213,10 +201,10 @@ $(window).on('resize scroll', function() {
         slidesToScroll: 1,
         dots: true,
         responsive: [
-          {
-            breakpoint: 9999,
-            settings: "unslick"
-          },
+          // {
+          //   breakpoint: 9999,
+          //   settings: "unslick"
+          // },
           {
             breakpoint: 768,
             settings: {
@@ -229,37 +217,25 @@ $(window).on('resize scroll', function() {
           {
             breakpoint: 568,
             settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '70px',
-              slidesToShow: 1
             }
           },
           {
             breakpoint: 500,
             settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '30px',
-              slidesToShow: 1
             }
           },
           {
             breakpoint: 400,
             settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '10px',
-              slidesToShow: 1
             }
           },
           {
             breakpoint: 320,
             settings: {
-              arrows: false,
-              centerMode: true,
               centerPadding: '0px',
-              slidesToShow: 1
             }
           }
         ]
