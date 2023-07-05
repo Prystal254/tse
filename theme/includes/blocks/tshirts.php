@@ -30,3 +30,23 @@
         </div>
     </div>
 </section>
+<div class="product-modal">
+    <div class="image">
+        <?php foreach($block["products"] as $product){?>
+            <img class="<?php echo $product["product"]["name"]?> full-img small" size="small" src="<?php echo $product["product"]["small"]?>" alt="">
+            <img class="<?php echo $product["product"]["name"]?> full-img medium" size="medium" src="<?php echo $product["product"]["medium"]?>" alt="">
+            <img class="<?php echo $product["product"]["name"]?> full-img large" size="large" src="<?php echo $product["product"]["large"]?>" alt="">
+        <?php } ?>
+    </div>
+    <div class="window">
+        <div class="wrapper">
+            <div class="name">
+                <?php foreach($block["products"] as $product){?>
+                    <div class="single-name" item="<?php echo $product["product"]["name"] ?>">
+                        <?php echo $product["product"]["name"]?>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+</div>

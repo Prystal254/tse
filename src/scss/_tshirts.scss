@@ -135,6 +135,7 @@
                     transform: perspective(800px) rotateY(0turn);
                     overflow: visible;
                     width: 100%;
+                    z-index: 1;
                     display: flex;
                     margin-bottom: -50px;
                     justify-content: center;
@@ -145,6 +146,9 @@
                     @media(max-width:991px){
                         height: 250px;
                     }
+                    @media(max-width:767px){
+                        z-index: -1;
+                    }
                     &::after{
                         position: absolute;
                         content: "";
@@ -153,6 +157,7 @@
                         opacity: 0;
                         left: 0;
                         right: 0;
+                        z-index: 1;
                         height: 50%;
                         background: linear-gradient(to top, transparentize($color: $black, $amount: 0.2), transparent);
                     }
@@ -162,6 +167,7 @@
                         left: 0;
                         width: 100%;
                         height: 100%;
+                        z-index: -1;
                         backface-visibility: hidden;
                         transition: 0.6s ease-in-out;
                         display: flex;
@@ -194,6 +200,8 @@
                     transition: 400ms ease-in;
                     align-items: center;
                     flex-direction: column;
+                    position: relative;
+                    z-index: 5;
                     scale: 0.95;
                     opacity: 0;
                     .price{

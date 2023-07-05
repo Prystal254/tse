@@ -37,6 +37,100 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+      //slick
+
+      $('.tshirts').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        centerMode: true,
+        slidesToShow: 1,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 9999,
+            settings: "unslick"
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              centerPadding: '100px'
+            }
+          },
+          {
+            breakpoint: 568,
+            settings: {
+              centerPadding: '70px',
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              centerPadding: '30px',
+            }
+          },
+          {
+            breakpoint: 400,
+            settings: {
+              centerPadding: '10px',
+            }
+          },
+          {
+            breakpoint: 320,
+            settings: {
+              centerPadding: '0px',
+            }
+          }
+        ]
+      });
+    $('.accessories').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true,
+        centerMode: true,
+        slidesToShow: 1,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 9999,
+            settings: "unslick"
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              centerPadding: '100px',
+            }
+          },
+          {
+            breakpoint: 568,
+            settings: {
+              centerPadding: '70px',
+            }
+          },
+          {
+            breakpoint: 500,
+            settings: {
+              centerPadding: '30px',
+            }
+          },
+          {
+            breakpoint: 400,
+            settings: {
+              centerPadding: '10px',
+            }
+          },
+          {
+            breakpoint: 320,
+            settings: {
+              centerPadding: '0px',
+            }
+          }
+        ]
+      });
+
+
+      //menu
+
     setTimeout(() => {
         $(".header").addClass("scrolled")
     }, 600);
@@ -149,95 +243,5 @@ $(window).on('resize scroll', function() {
         }
         $(".model").css("transform", `translateY(${parallax}px)`)
     }
-    
-    //slick
-
-    $('.tshirts').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: true,
-        responsive: [
-          {
-            breakpoint: 9999,
-            settings: "unslick"
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '100px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 568,
-            settings: {
-              centerPadding: '70px',
-            }
-          },
-          {
-            breakpoint: 500,
-            settings: {
-              centerPadding: '30px',
-            }
-          },
-          {
-            breakpoint: 400,
-            settings: {
-              centerPadding: '10px',
-            }
-          },
-          {
-            breakpoint: 320,
-            settings: {
-              centerPadding: '0px',
-            }
-          }
-        ]
-      });
-    $('.accessories').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: true,
-        responsive: [
-          // {
-          //   breakpoint: 9999,
-          //   settings: "unslick"
-          // },
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '100px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 568,
-            settings: {
-              centerPadding: '70px',
-            }
-          },
-          {
-            breakpoint: 500,
-            settings: {
-              centerPadding: '30px',
-            }
-          },
-          {
-            breakpoint: 400,
-            settings: {
-              centerPadding: '10px',
-            }
-          },
-          {
-            breakpoint: 320,
-            settings: {
-              centerPadding: '0px',
-            }
-          }
-        ]
-      });
+  
 });
