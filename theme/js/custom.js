@@ -152,116 +152,116 @@ $(window).on('resize scroll', function() {
     
     //slick
 
-    $('.tshirts').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: true,
-        responsive: [
-          {
-            breakpoint: 9999,
-            settings: "unslick"
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '100px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 568,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '70px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 500,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '30px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 400,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '10px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 320,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '0px',
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
-    $('.accessories').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: true,
-        responsive: [
-          {
-            breakpoint: 9999,
-            settings: "unslick"
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '100px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 568,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '70px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 500,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '30px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 400,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '10px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 320,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '0px',
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
+    // $('.tshirts').slick({
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     dots: true,
+    //     responsive: [
+    //       {
+    //         breakpoint: 9999,
+    //         settings: "unslick"
+    //       },
+    //       {
+    //         breakpoint: 768,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '100px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 568,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '70px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 500,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '30px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 400,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '10px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 320,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '0px',
+    //           slidesToShow: 1
+    //         }
+    //       }
+    //     ]
+    //   });
+    // $('.accessories').slick({
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     dots: true,
+    //     responsive: [
+    //       {
+    //         breakpoint: 9999,
+    //         settings: "unslick"
+    //       },
+    //       {
+    //         breakpoint: 768,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '100px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 568,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '70px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 500,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '30px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 400,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '10px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 320,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '0px',
+    //           slidesToShow: 1
+    //         }
+    //       }
+    //     ]
+    //   });
 });
