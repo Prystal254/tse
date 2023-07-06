@@ -170,6 +170,27 @@ $(document).ready(function(){
         $(".tshirt").addClass("hover");
     }
 
+    //modal
+
+    $(".tshirt").click(function(){
+      let name = $(this).attr("name");
+      $(".full-img").hide(0);
+      $(`.full-img.small[name="${name}"]`).show(0);
+      $(".single-name").hide(0);
+      $(`.single-name[name="${name}"]`).show(0);
+      $(".product-modal").fadeIn("slow");
+      $(".size-btn").click(function(){
+        let size = $(this).attr("size");
+        if($(`.full-img.${size}[name="${name}"]`).css("display") == "none"){
+          $(".full-img").fadeOut();
+          $(`.full-img.${size}[name="${name}"]`).fadeIn();
+        }
+      })
+    })
+    $(".close-modal").click(function(){
+      $(".product-modal").fadeOut("slow")
+    })
+
     //cursor
     $(window).mousemove(function(e){
         if(($(window).innerWidth() > 1024)){

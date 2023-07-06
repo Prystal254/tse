@@ -1,6 +1,7 @@
 .product-modal{
     position: fixed;
     inset: 0;
+    display: none;
     z-index: 2000;
     background-color: rgba($color: #000000, $alpha: 0.5);
     .image{
@@ -33,19 +34,104 @@
             margin: 80px 300px;
             margin-right: 100px;
             height: 100%;
+            .close-modal{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 10px 20px;
+                background-color: rgba($color: #a01818, $alpha: 0.5);
+            }
             .name{
+                height: 70px;
                 position: relative;
+                margin-bottom: 60px;
                 .single-name{
                     position: absolute;
                     left: 0;
                     top: 0;
-                    font-size: 150px;
+                    font-size: 100px;
                     line-height: 70%;
                     font-family: "akiri";
                     display: none;
                     &:first-child{
                         display: block;
                     }
+                }
+            }
+            .description{
+                max-width: 70%;
+                font-size: 18px;
+                font-family: $mont;
+                color: rgba($color: #000000, $alpha: 0.8);
+                margin-bottom: 40px;
+            }
+            .qty{
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+                div{
+                    border: 2px solid black;
+                    padding: 10px 20px;
+                    font-size: 20px;
+                    &:nth-child(2){
+                        background-color: #000000;
+                        color: white;
+                    }
+                }
+            }
+            .size-buttons{
+                display: flex;
+                grid-gap: 20px;
+                margin-bottom: 60px;
+                .size-btn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 10px 40px;
+                    background-color: $primary;
+                    color: #000000;
+                    border-radius: 8px;
+                    border: 2px solid $primary;
+                    transition: 100ms ease-in-out;
+                    .size{
+                        font-family: "akiri";
+                        font-size: 24px;
+                    }
+                    .person{
+                        font-size: 12px;
+                        font-family: $mont;
+                        font-weight: 900;
+                        font-style: italic;
+                    }
+                    &:hover{
+                        transition: 100ms ease-in-out;
+                        background-color: transparent;
+                        color: $primary;
+                        backdrop-filter: blur(4px);
+                        color: #000000;
+                    }
+                }
+            }
+            .add-to-cart{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                padding: 20px 80px;
+                background-color: $primary;
+                color: #000000;
+                border-radius: 8px;
+                border: 2px solid $primary;
+                transition: 100ms ease-in-out;
+                font-family: "akiri";
+                font-size: 36px;
+                &:hover{
+                    transition: 100ms ease-in-out;
+                    background-color: transparent;
+                    color: $primary;
+                    backdrop-filter: blur(4px);
+                    color: #000000;
                 }
             }
         }
