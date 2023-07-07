@@ -130,7 +130,6 @@ $(document).ready(function(){
 
 
       //menu
-
     setTimeout(() => {
         $(".header").addClass("scrolled")
     }, 600);
@@ -174,23 +173,28 @@ $(document).ready(function(){
 
     $(".tshirt").click(function(){
       let name = $(this).attr("name");
-      $(".full-img").hide(0);
-      $(`.full-img.small[name="${name}"]`).show(0);
-      $(".single-name").hide(0);
-      $(`.single-name[name="${name}"]`).show(0);
+      $(".full-img").hide(0)
+      $(".img-group").hide(0)
+      $(`.img-group[name="${name}"]`).show(0)
+      $(`.img-group[name="${name}"] .full-img.small`).show(0)
+      $(".name .single-name").hide(0)
+      $(`.name .single-name[name="${name}"]`).show(0)
       $(".product-modal").fadeIn("slow");
-      $(".size-btn").click(function(){
-        let size = $(this).attr("size");
-        if($(`.full-img.${size}[name="${name}"]`).css("display") == "none"){
-          $(".full-img").fadeOut();
-          $(`.full-img.${size}[name="${name}"]`).fadeIn();
-        }
-      })
+      $(".product-modal").css("display", "flex");
     })
     $(".close-modal").click(function(){
+      console.log("sssssssss")
       $(".product-modal").fadeOut("slow")
     })
-
+    $(".size-btn").click(function(){
+      let size = $(this).attr("size");
+      for (let i = 0; i < $(".img-group").length; i++) {
+        if(($(".img-group").eq(i).css("display") != "none")&&($(".img-group").eq(i).find(`.full-img.${size}`).css("display") == "none")){
+          $(".img-group").eq(i).find(`.full-img`).fadeOut()
+          $(".img-group").eq(i).find(`.full-img.${size}`).fadeIn()
+        }      
+      }
+    })
     //cursor
     $(window).mousemove(function(e){
         if(($(window).innerWidth() > 1024)){

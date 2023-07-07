@@ -33,9 +33,11 @@
 <div class="product-modal">
     <div class="image">
         <?php foreach($block["products"] as $product){?>
-            <img name="<?php echo $product["product"]["name"]?>" class="full-img small" size="small" src="<?php echo $product["product"]["small"]?>" alt="">
-            <img name="<?php echo $product["product"]["name"]?>" class="full-img medium" size="medium" src="<?php echo $product["product"]["medium"]?>" alt="">
-            <img name="<?php echo $product["product"]["name"]?>" class="full-img large" size="large" src="<?php echo $product["product"]["large"]?>" alt="">
+            <div class="img-group" name="<?php echo $product["product"]["name"]?>" >
+                <img class="full-img small" size="small" src="<?php echo $product["product"]["small"]?>" alt="">
+                <img class="full-img medium" size="medium" src="<?php echo $product["product"]["medium"]?>" alt="">
+                <img class="full-img large" size="large" src="<?php echo $product["product"]["large"]?>" alt="">
+            </div>
         <?php } ?>
     </div>
     <div class="window">
