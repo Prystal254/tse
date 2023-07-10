@@ -2,7 +2,8 @@
 $args = array(
     'post_type'      => 'product',
     'posts_per_page' => 10, // Number of products to retrieve
-    'product_cat'    => 'Tees', // Slug of the product category from where the products will be listed
+    // 'product_cat'    => 'Tees', 
+    // Slug of the product category from where the products will be listed
 );
 
 
@@ -21,6 +22,7 @@ $products = new WP_Query($args);
                 $sale_price = get_post_meta($product_id, '_sale_price', true);
                 $product_images = get_field('product_images', $product_id);
                 $product_sizes = get_field('product_sizes', $product_id);
+                // var_dump($product_sizes["small_image"]["url"]);
                 $gallery_image=explode(",", get_post_meta($product_id, '_product_image_gallery', true));
                 $product_description = $product -> post_content;
                 // var_dump($product_images);
@@ -62,20 +64,20 @@ $products = new WP_Query($args);
 </section>
 
 
-<?php foreach($products as $product){ ?>
-    <div class="product-modal <?php echo $product_id ?>">
+<div class="product-modal <?php echo $product_id ?>">
     <div class="image">
-    <div class="img-group" name="<?php echo $product["product"]["name"]?>" >
-        <?php foreach($product_sizes as $image){
-            echo "<img class="full-img small" size="small"  src='".$image['small_image']["url"]."'>";
-            echo "<img class="full-img medium" size="medium" src='".$image['medium_image']["url"]."'>";
-            echo "<img class="full-img large" size="large" src='".$image['large_image']["url"]."'>";
-         } ?>
-    </div>
+    <div class="img-group" name="<?php echo $product_name?>" >
+    <?php 
+        // var_dump($product_sizes["small_image"]["url"] )
+    ?>
+
+        <img class="full-img small" size="small" src="<?php echo $product_sizes["small_image"]["url"]  ?>" alt="">
+        <!-- <img class="full-img medium" size="medium" src="<?php echo $product_sizes["medium_image"]["url"]  ?>" alt="">
+        <img class="full-img large" size="large" src="<?php echo $product_sizes["large_image"]["url"]  ?>" alt=""> -->
+        </div>
     </div>
 
-<?php } ?>
-<div class="product-modal">
+<!-- <div class="product-modal">
     <div class="image">
         <?php foreach($block["products"] as $product){?>
             <div class="img-group" name="<?php echo $product["product"]["name"]?>" >
@@ -120,42 +122,7 @@ $products = new WP_Query($args);
             <div class="close-modal">close modal</div>
         </div>
     </div>
-</div>
-
-<?php 
+</div> -->
 
 
 
-
-
-
-
-
-
-
-foreach ($products-> posts as $product) {
-    if ($product -> ID == 99) {
-        $product_name = $product -> post_title;
-        $regular_price = get_post_meta($product -> ID, '_regular_price', true);
-        $sale_price = get_post_meta($product -> ID, '_sale_price', true);
-        $product_images = get_field('product_images', $product -> ID);
-        $product_sizes = get_field('product_sizes', $product -> ID);
-        // $gallery_image_ids = get_post_meta($product -> ID, '_product_image_gallery', true);
-        $gallery_image=explode(",", get_post_meta($product -> ID, '_product_image_gallery', true));
-        $product_description = $product -> post_content;
-
-        foreach($product_images as $image){
-            echo "<img src='".$image['image']["url"]."'>";
-        }
-        foreach($product_sizes as $image){
-            echo "<img src='".$image['small_image']["url"]."'>";
-            echo "<img src='".$image['medium_image']["url"]."'>";
-            echo "<img src='".$image['large_image']["url"]."'>";
-        }
-        foreach($gallery_image as $image){
-            echo "<img src='".wp_get_attachment_url($image)."'>";
-        }
-    }
-}
-
-?>
